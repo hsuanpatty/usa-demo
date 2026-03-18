@@ -895,7 +895,7 @@ p {
 
 @media (min-width: 1800px) { 
   .card-content {
-    padding: 1rem 1rem 2.3rem;
+    padding: 1rem 2rem 2rem;
   }
 
   .card-d h3 {
