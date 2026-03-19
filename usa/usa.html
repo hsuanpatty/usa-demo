@@ -4,21 +4,23 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>巨匠旅遊｜華麗美洲</title>
+    <title>巨匠旅遊｜華麗美洲.直飛七大城市</title>
     <link rel="shortcut icon" href="https://www.artisan.com.tw/images/artisan.ico" />
-    <meta name="description" content="巨匠旅遊｜華麗美洲" />
+    <meta name="description" content="巨匠旅遊｜華麗美洲.直飛七大城市" />
     <meta
       name="keywords"
       content="中華航空,華麗美洲,美洲,美西,阿拉斯加西雅圖,阿拉斯加,西溫,四大國家公園,冰原雪車,露易絲湖城堡飯店,惠斯勒城堡飯店,冰川健行,極光列車,巨匠旅遊"
     />
 
     <!-- open graph  -->
-    <meta property="og:site_name" content="巨匠旅遊｜華麗美洲" />
+    <meta property="og:site_name" content="巨匠旅遊" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="縱覽美洲萬千風貌，穿越壯闊國家公園與世界級城市，感受一場結合自然、人文與歷史的深度奢華旅程" />
-    <meta name="og:description" content="一次走進美洲精華，收藏世界級風景" />
+    <!-- 這裡放標題（短） -->
+    <meta property="og:title" content="巨匠旅遊｜華麗美洲.直飛七大城市" />
+    <!-- 這裡放敘述（長） -->
+    <meta property="og:description" content="縱覽美洲萬千風貌，穿越壯闊國家公園與世界級城市，感受一場結合自然、人文與歷史的深度奢華旅程" />
     <meta property="og:image" content="./images/thumb.jpg" />
-    <meta property="og:image:alt" content="立山黑部" />
+    <meta property="og:image:alt" content="華麗美洲" />
 
     <!-- 輪播 -->
     <link rel="stylesheet" href="./css/owl.carousel.min.css" />
@@ -301,6 +303,11 @@
         </div>
       </div>
     </footer>
+    <!-- top -->
+    <button onclick="topFunction()" id="movetop" title="Go to top">
+      <span class="arrow"></span>
+      <span class="top-text">TOP</span>
+    </button>
     <!-- partial -->
     <script src="./js/jquery-3.6.0.min.js"></script>
     <script src="./js/owl.carousel.min.js"></script>
@@ -308,5 +315,27 @@
     <script src="./js/theme.js"></script>
     <script src="./js/wow.min.js"></script>
     <script src="./js/wow.js"></script>
+
+    <script>
+      // 取得按鈕
+      const moveTopBtn = document.getElementById("movetop");
+
+      // 滾動時顯示/隱藏
+      window.onscroll = function () {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+          moveTopBtn.style.display = "flex";
+        } else {
+          moveTopBtn.style.display = "none";
+        }
+      };
+
+      // 點擊回到最上面
+      function topFunction() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
+    </script>
   </body>
 </html>
